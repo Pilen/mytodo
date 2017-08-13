@@ -1,0 +1,55 @@
+
+* Actions
+Add todo items
+Remove todo items
+Mark todo item as done / closed
+Edit todo
+
+View todos chronologically
+View open/closed todos
+
+* State of a "todo"
+  Title
+  Description
+  Open/Closed
+  Datetime created
+
+* Users
+  How should multiple users be able to use the site?
+
+  Global todo list, shared by everyone
+  Simple but not that useful.
+
+  User by session, store a generated userid in a cookie.
+  Cant share todolist between devices. If cookie lost, todolist is lost.
+  Could even store the entire todolist locally in the browser.
+
+  Secret link. When creating a todolist you get a random url to your todolist.
+  Should be hard to bruteforce.
+  Share by link, better than by cookie.
+  Long random urls are hard to remember
+
+  Username + password, The common way.
+  Needs a database of users and hashing of passwords.
+
+  Login with google/facebook
+  Most users already have such an account.
+
+
+  As we need some kind of database anyway to store the todos and users, a simple login system is probably the easiest.
+  A login using google/facebook can be added on top of this.
+
+* Other extensions
+** Should todos have a due date?
+   Then we also need a way to mark todos overdue.
+   And views for todos over due date.
+
+** projects
+   A notion of different projects.
+   todos could be assigned to a project
+   View by project
+
+** Shared todos
+   Todos shared by users.
+   Editing visible to everyone
+   Closing shared too
