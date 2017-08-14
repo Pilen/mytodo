@@ -1,0 +1,40 @@
+
+.colors {
+    color: #FFFFFF;
+    color: #41505D;
+    color: #2E95B7;
+    color: #70C7FE;
+    color: #F4D06F;
+
+
+
+
+}
+body {
+    background-color: #70C7FE;
+    color: #41505D;
+}
+
+.box {
+    box-model: content-box;
+    box-model: box-sizing;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #2e95b7;
+    border-radius: 5px;
+    padding: 20px;
+
+    margin-top: 30px;
+
+}
+
+.box .top {
+    /* background-color: #2e95b7; */
+    /* width: 100%; */
+}
+
+.btn-primary {
+    background-color: #2E95B7;
+    border-color: #2E95B7;
+}
