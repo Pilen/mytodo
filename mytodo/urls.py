@@ -17,7 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r"^todo/", include("mytodoapp.urls")),
-    url('^', include('django.contrib.auth.urls')),
+    url(r"^", include("mytodoapp.urls")),
+    # url('^', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
 ]

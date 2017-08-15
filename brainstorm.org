@@ -1,4 +1,8 @@
 
+* Run
+python -m venv env
+source env/bin/activate
+
 * Actions
 Add todo items
 Remove todo items
@@ -38,6 +42,51 @@ View open/closed todos
 
   As we need some kind of database anyway to store the todos and users, a simple login system is probably the easiest.
   A login using google/facebook can be added on top of this.
+
+* Pages
+  Login
+  Create user
+
+  Modify profile?
+
+  SPA?:
+  List chronologically
+  List views
+  View details
+
+
+* Technical Toolset
+  Backend use Django
+
+  Styling, Bootstrap, easy to get going
+
+  Database, sqlite, simple, included with python works well with Django, and the data is basically relational
+
+  Frontend, jquery, simple and effective.
+  Alternatively Angular could be a decent choice, though it might be a bit overkill for the scale of the solution.
+
+* Current issues
+  # Make filtering views work
+  # Login/create account page
+  # front page
+
+* Testing
+** Manually, by poking around
+
+** Unit tests, in python, against the backend functions
+   Adding a todo makes it visible
+   All the current users todos are returned
+   Only the current users todos are returned
+   Closing/opening todos works
+   After deleting a todo it no longer exists
+
+   Can't create a user with an existing name
+   Can't give two different passwords at registration
+   Can't have no password
+   Can't have empty username
+
+
+** Selenium, use a script to control the browser, does everything actually work as expected?
 
 * Other extensions
 ** Should todos have a due date?

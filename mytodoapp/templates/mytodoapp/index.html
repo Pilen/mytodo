@@ -24,6 +24,12 @@
 
 {% csrf_token %}
 <div class="box">
+  <div class="filterButtons">
+    <button class="btn btn-primary" id="showAll">All</button>
+    <button class="btn" id="showOpen">Open</button>
+    <button class="btn" id="showClosed">Closed</button>
+  </div>
+  <hr/>
   <ul class="list-group"> </ul>
 </div>
 {% endblock %}
