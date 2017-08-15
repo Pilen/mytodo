@@ -1,16 +1,16 @@
 
 * Run
-python -m venv env
-source env/bin/activate
+  python -m venv env
+  source env/bin/activate
 
 * Actions
-Add todo items
-Remove todo items
-Mark todo item as done / closed
-Edit todo
+  Add todo items
+  Remove todo items
+  Mark todo item as done / closed
+  Edit todo
 
-View todos chronologically
-View open/closed todos
+  View todos chronologically
+  View open/closed todos
 
 * State of a "todo"
   Title
@@ -102,3 +102,4 @@ View open/closed todos
    Todos shared by users.
    Editing visible to everyone
    Closing shared too
+   Maybe as shared projects?
