@@ -39,7 +39,7 @@ function init(data) {
                 dataType: "json",
                 data: $("form").serialize(),
                 success: addTodo,
-                error: errorhandler});
+                error: simpleErrorHandler});
         $("form")[0].reset();
     });
 
@@ -55,7 +55,7 @@ function init(data) {
                        closed:todo.closed,
                        csrfmiddlewaretoken: csrf},
                 // success: function(){console.log("yay");},
-                error: errorhandler});
+                error: simpleErrorHandler});
         filterTodos();
     });
 
@@ -69,7 +69,7 @@ function init(data) {
                     data: {id:todo.id,
                            csrfmiddlewaretoken: csrf},
                     success: function(){event.currentTarget.parentElement.remove();},
-                    error: errorhandler});
+                    error: simpleErrorHandler});
         }
     });
 
@@ -106,15 +106,12 @@ function init(data) {
             });
         }
     }
-}
 
-function errorhandler(a, b, c) {
-    console.log("ERROR:");
-    console.log(a);
-    console.log(b);
-    console.log(c);
+    function simpleErrorHandler(a, b, c) {
+        console.log("ERROR:");
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
 }
-
-$.when($.getJSON("/api/all"), $.ready)
-    .done(init);
-// $().ready(init);
+$.when($.getJSON("/api/all"), $.ready).done(init);
